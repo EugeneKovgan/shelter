@@ -1,0 +1,104 @@
+.header__logo {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+.header__logo.active {
+    opacity: 0;
+}
+.header__logo.nav {
+    display: none;
+}
+@media (max-width: 1279px) {
+    .header__logo {
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+    .header__logo.active {
+        opacity: 0;
+    }
+    /* .header__logo_subtitle {
+        color: #fff;
+    } */
+}
+@media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .header__logo.nav {
+        display: none;
+    }
+    .header__nav.active .header__logo_title,
+    .header__nav.active .burger::before,
+    .header__nav.active .burger::after,
+    .header__nav.active .burger.active span {
+        color: rgba(241, 205, 179, 1);
+        z-index: 10;
+    }
+    .header__logo.nav {
+        display: block;
+    }
+    .header__nav {
+        position: absolute;
+        right: -100%;
+        transition: right 1s ease;
+        top: 0;
+        position: fixed;
+        display: block;
+        width: 320px;
+        height: 100%;
+        background-color: #292929;
+    }
+    .header__nav.active {
+        right: 0;
+    }
+    .nav_background {
+        position: fixed;
+        top: 0;
+        right: -110%;
+        margin-right: 320px;
+        width: calc(100% - 320px);
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: right 1s ease;
+    }
+    .nav_background.active {
+        right: 0;
+    }
+    .header__nav {
+        overflow: auto;
+    }
+    .header__nav li:first-child {
+        padding-left: 10px;
+        width: 200px;
+        margin-top: 30px;
+        margin-right: auto;
+        text-align: left;
+    }
+    .header__nav li:nth-child(2) {
+        margin-top: 158px;
+        text-align: center;
+    }
+    .header__nav li {
+        height: 51px;
+        text-align: center;
+    }
+    .header__nav li a {
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 51px;
+        color: #fafafa;
+        text-align: center;
+    }
+    .burger.active {
+        transform: rotate(90deg);
+    }
+    .header__link.a:hover {
+        color: rgba(250, 250, 250, 1);
+        position: relative;
+    }
+    .header__nav .header__logo_subtitle {
+        color: #fff;
+    }
+}
